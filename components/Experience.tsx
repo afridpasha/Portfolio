@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Calendar, MapPin, Users, Award, TrendingUp, ExternalLink } from 'lucide-react'
-import { experience } from '@/lib/utils'
+import { experience, achievements } from '@/lib/utils'
 
 const ExperienceCard = ({ exp, index }: { exp: any, index: number }) => {
   const [ref, inView] = useInView({
@@ -179,7 +179,7 @@ const Experience = () => {
           </div>
         </motion.div>
 
-        {/* Testimonials */}
+        {/* Achievements & Recognition */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -190,38 +190,31 @@ const Experience = () => {
             Achievements & Recognition
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                achievement: "Advanced to Stage-2 | AlgoVision Data Analytics Competition",
-                description: "Demonstrated exceptional data analytics and problem-solving skills",
-                icon: "📈"
-              },
-              {
-                achievement: "Providence LEAP Ideathon Qualified to Stage-2",
-                description: "Innovative solution design and presentation skills recognized",
-                icon: "💡"
-              },
-              {
-                achievement: "Secured 32nd Position in Deal Dynamics at Quark'25, BITS Pilani",
-                description: "Outstanding performance in competitive programming and analytics",
-                icon: "🏆"
-              },
-              {
-                achievement: "Hackathon Participant | Felicity '25",
-                description: "Active participation in technical competitions and innovation challenges",
-                icon: "🚀"
-              }
-            ].map((item, index) => (
+            {achievements.map((achievement, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 1.4 + index * 0.2 }}
-                className="bg-gray-50 rounded-xl p-6"
+                className="bg-gray-50 rounded-xl p-6 relative group hover:bg-gray-100 transition-colors cursor-pointer"
+                onClick={() => window.open(achievement.url, '_blank')}
               >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h4 className="font-semibold text-gray-800 mb-2">{item.achievement}</h4>
-                <p className="text-gray-600 text-sm">{item.description}</p>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity bg-primary-600 text-white p-2 rounded-full"
+                >
+                  <ExternalLink size={16} />
+                </motion.div>
+                <div className="text-4xl mb-4">
+                  {index === 0 ? '📈' : index === 1 ? '💡' : index === 2 ? '🏆' : '🚀'}
+                </div>
+                <h4 className="font-semibold text-gray-800 mb-2 pr-12">{achievement.title}</h4>
+                <p className="text-gray-600 text-sm">
+                  {index === 0 ? 'Demonstrated exceptional data analytics and problem-solving skills' :
+                   index === 1 ? 'Innovative solution design and presentation skills recognized' :
+                   index === 2 ? 'Outstanding performance in competitive programming and analytics' :
+                   'Active participation in technical competitions and innovation challenges'}
+                </p>
               </motion.div>
             ))}
           </div>

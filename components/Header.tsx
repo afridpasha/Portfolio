@@ -2,11 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, X, Github, Linkedin, Mail, Download } from 'lucide-react'
+import { Menu, X, Github, Linkedin, Mail, Download, ChevronDown } from 'lucide-react'
+import { codingProfiles } from '@/lib/utils'
+import Image from 'next/image'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [codingDropdownOpen, setCodingDropdownOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -54,6 +57,41 @@ const Header = () => {
                 {item.name}
               </motion.a>
             ))}
+            
+            {/* Coding Profiles Dropdown */}
+            <div className="relative">
+              <motion.button
+                onClick={() => setCodingDropdownOpen(!codingDropdownOpen)}
+                whileHover={{ scale: 1.1 }}
+                className="text-gray-700 hover:text-primary-600 transition-colors font-medium flex items-center space-x-1"
+              >
+                <span>Coding Profiles</span>
+                <ChevronDown size={16} className={`transition-transform ${codingDropdownOpen ? 'rotate-180' : ''}`} />
+              </motion.button>
+              
+              {codingDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="absolute top-full mt-2 bg-white rounded-lg shadow-lg border py-2 min-w-[180px] z-50"
+                >
+                  {codingProfiles.map((profile) => (
+                    <motion.a
+                      key={profile.name}
+                      href={profile.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ backgroundColor: '#f3f4f6' }}
+                      className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:text-primary-600 transition-colors"
+                      onClick={() => setCodingDropdownOpen(false)}
+                    >
+                      <Image src={profile.image} alt={profile.name} width={20} height={20} className="rounded" />
+                      <span>{profile.name}</span>
+                    </motion.a>
+                  ))}
+                </motion.div>
+              )}
+            </div>
           </div>
 
           {/* Social Links */}
@@ -67,7 +105,7 @@ const Header = () => {
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.2 }}
-              href="https://linkedin.com/in/afridpasha"
+              href="https://www.linkedin.com/in/afrid-pasha-80240b220/"
               className="text-gray-600 hover:text-primary-600"
             >
               <Linkedin size={20} />
@@ -117,6 +155,24 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
+            
+            {/* Mobile Coding Profiles */}
+            <div className="mt-4 pt-4 border-t">
+              <div className="text-gray-600 font-medium mb-2">Coding Profiles</div>
+              {codingProfiles.map((profile) => (
+                <a
+                  key={profile.name}
+                  href={profile.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center space-x-3 py-2 text-gray-700 hover:text-primary-600 transition-colors"
+                >
+                  <Image src={profile.image} alt={profile.name} width={20} height={20} className="rounded" />
+                  <span>{profile.name}</span>
+                </a>
+              ))}
+            </div>
           </motion.div>
         )}
       </nav>

@@ -87,7 +87,7 @@ const Footer = () => {
               <div className="flex space-x-4">
                 {[
                   { icon: <Github size={20} />, href: 'https://github.com/afridpasha' },
-                  { icon: <Linkedin size={20} />, href: 'https://linkedin.com/in/afridpasha' },
+                  { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/in/afrid-pasha-80240b220/' },
                   { icon: <Mail size={20} />, href: 'mailto:afridpasha1983@gmail.com' },
                 ].map((social, index) => (
                   <motion.a

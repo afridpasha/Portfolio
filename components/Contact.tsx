@@ -18,10 +18,34 @@ const Contact = () => {
     message: ''
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -118,7 +142,7 @@ const Contact = () => {
               <div className="flex space-x-4">
                 {[
                   { icon: <Github size={24} />, link: 'https://github.com/afridpasha', color: 'hover:text-gray-800' },
-                  { icon: <Linkedin size={24} />, link: 'https://linkedin.com/in/afridpasha', color: 'hover:text-blue-600' },
+                  { icon: <Linkedin size={24} />, link: 'https://www.linkedin.com/in/afrid-pasha-80240b220/', color: 'hover:text-blue-600' },
                   { icon: <Mail size={24} />, link: 'mailto:afridpasha1983@gmail.com', color: 'hover:text-red-600' },
                 ].map((social, index) => (
                   <motion.a
@@ -211,13 +235,30 @@ const Contact = () => {
 
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-primary-600 text-white py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors flex items-center justify-center space-x-2"
+                disabled={isSubmitting}
+                whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                className={`w-full py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2 ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-primary-600 hover:bg-primary-700'
+                } text-white`}
               >
                 <Send size={20} />
-                <span>Send Message</span>
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               </motion.button>
+              
+              {submitStatus === 'success' && (
+                <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                  <p className="text-green-700 text-sm">Message sent successfully! I'll get back to you soon.</p>
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-red-700 text-sm">Failed to send message. Please try again or email me directly.</p>
+                </div>
+              )}
             </form>
 
             {/* Response Time */}

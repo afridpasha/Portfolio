@@ -72,6 +72,7 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-4 mb-12"
             >
               <motion.button
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
@@ -79,6 +80,7 @@ const Hero = () => {
                 View My Work
               </motion.button>
               <motion.button
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors"

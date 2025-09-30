@@ -11,10 +11,33 @@ export const personalInfo = {
   location: 'Hyderabad, Telangana',
   phone: '+91 7569061834',
   email: 'afridpasha1983@gmail.com',
-  linkedin: 'https://linkedin.com/in/afridpasha',
+  linkedin: 'https://www.linkedin.com/in/afrid-pasha-80240b220/',
   github: 'https://github.com/afridpasha',
   portfolio: 'https://afridpasha.github.io'
 }
+
+export const codingProfiles = [
+  {
+    name: 'LeetCode',
+    url: 'https://leetcode.com/u/afridpasha1983/',
+    image: '/LeetCode1.png'
+  },
+  {
+    name: 'CodeChef',
+    url: 'https://www.codechef.com/users/afridpasha1983',
+    image: '/codechef.png'
+  },
+  {
+    name: 'HackerRank',
+    url: 'https://www.hackerrank.com/profile/afridpasha1983',
+    image: '/hackerrank.png'
+  },
+  {
+    name: 'GeeksForGeeks',
+    url: 'https://www.geeksforgeeks.org/user/afridpasvrls/',
+    image: '/geeksforgeeks.png'
+  }
+]
 
 export const education = [
   {
@@ -51,10 +74,22 @@ export const certifications = [
 ]
 
 export const achievements = [
-  'Advanced to Stage-2 | AlgoVision Data Analytics Competition',
-  'Providence LEAP Ideathon Qualified to Stage-2',
-  'Secured 32nd Position in Deal Dynamics at Quark\'25, BITS Pilani',
-  'Hackathon Participant | Felicity \'25'
+  {
+    title: 'Advanced to Stage-2 | AlgoVision Data Analytics Competition',
+    url: 'https://drive.google.com/file/d/1mfOnzCj0TpI6RyeEfUlv79PE7xPk2Tow/view?usp=sharing'
+  },
+  {
+    title: 'Providence LEAP Ideathon Qualified to Stage-2',
+    url: 'https://drive.google.com/file/d/1kdCFHi2EhdrMi0QMG124bo-DezUCKUWL/view?usp=sharing'
+  },
+  {
+    title: 'Secured 32nd Position in Deal Dynamics at Quark\'25, BITS Pilani',
+    url: 'https://unstop.com/quiz/deal-dynamics-quark25-birla-institute-of-technology-and-sciences-bits-pilani-kk-birla-goa-campus-1365726/online-assessment/211414?utm_campaign=site-emails&utm_medium=d2c-automated&utm_source=result-out-deal-dynamics-bits-pilani-goa-birla-institute-of-technology-and-sciences-bits-pilani-kk-birla-goa-campus'
+  },
+  {
+    title: 'Hackathon Participant | Felicity \'25',
+    url: 'https://drive.google.com/file/d/1v0i21HSCjVEnjieBBWzutiinAxNKydCD/view?usp=sharing'
+  }
 ]
 
 export const skills = {
