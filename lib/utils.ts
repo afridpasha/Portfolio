@@ -131,7 +131,7 @@ export const projects = [
     tech: ['Python', 'Scikit-learn', 'Network Security', 'Machine Learning', 'Real-time Processing'],
     features: ['Real-time threat detection', 'Automated response system', 'Network monitoring', 'Security analytics'],
     results: ['99.9% detection accuracy', '1M+ events/second', '60% faster mitigation'],
-    liveUrl: 'https://github.com/afridpasha/cyber-threat-detection',
+    liveUrl: 'https://drive.google.com/file/d/1kUXbdVpQoCQHTb-43ESjicTHHhmQ2DSH/view?usp=sharing',
     githubUrl: 'https://github.com/afridpasha/-Real-Time-Cyber-Threat-Detection-System/tree/main',
     image: '/projects/cybersecurity.jpg'
   },
@@ -144,7 +144,7 @@ export const projects = [
     tech: ['Python', 'YOLO v8', 'Computer Vision', 'Machine Learning', 'OpenCV'],
     features: ['Real-time vehicle detection', 'Traffic flow optimization', 'Smart signal control', 'Analytics dashboard'],
     results: ['40% traffic flow improvement', 'Real-time detection', 'Smart optimization'],
-    liveUrl: 'https://github.com/afridpasha/traffic-optimization',
+    liveUrl: 'https://drive.google.com/file/d/1WuHSG6NV2XUKFycElAJgmOlfPI6d1EB9/view?usp=sharing',
     githubUrl: 'https://github.com/afridpasha/TRAFFIC-OPTIMIZATION/tree/master',
     image: '/projects/traffic.jpg'
   },
@@ -157,7 +157,7 @@ export const projects = [
     tech: ['MERN Stack', 'MySQL', 'Microservices', 'Node.js', 'React.js', 'Express.js'],
     features: ['Dual marketplace', 'Service provider matching', 'Real-time booking', 'Payment integration'],
     results: ['Full-stack implementation', 'Microservices architecture', 'Scalable design'],
-    liveUrl: 'https://github.com/afridpasha/local-connect',
+    liveUrl: 'https://drive.google.com/file/d/1iGQtJ30bujv_tmRqHhwAWlR-6HrARlzv/view?usp=sharing',
     githubUrl: 'https://github.com/afridpasha/Local-Connect-E-commerce',
     image: '/projects/ecommerce.jpg'
   }

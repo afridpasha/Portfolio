@@ -55,6 +55,24 @@ const Contact = () => {
     })
   }
 
+  const handleStartProject = () => {
+    setFormData({
+      name: '',
+      email: '',
+      subject: 'New Project Inquiry',
+      message: 'Hi Afrid,\n\nI\'m interested in starting a new project and would like to discuss the requirements. Please let me know your availability for a detailed discussion.\n\nProject Type: [Please specify - Web Development/Mobile App/ML/AI/Cloud Solutions/Other]\nTimeline: [Expected timeline]\nBudget Range: [If applicable]\n\nLooking forward to hearing from you!'
+    })
+    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const handleScheduleConsultation = () => {
+    const calendlyUrl = 'https://calendly.com/afridpasha1983'
+    const mailtoUrl = `mailto:afridpasha1983@gmail.com?subject=Consultation Request&body=Hi Afrid,%0D%0A%0D%0AI would like to schedule a consultation to discuss potential collaboration opportunities.%0D%0A%0D%0APreferred consultation type:%0D%0A- Technical consultation%0D%0A- Project discussion%0D%0A- Career guidance%0D%0A- Other: [Please specify]%0D%0A%0D%0APreferred time slots:%0D%0A[Please mention your availability]%0D%0A%0D%0AThank you!`
+    
+    // Try to open Calendly, fallback to email
+    window.open(calendlyUrl, '_blank') || window.open(mailtoUrl, '_blank')
+  }
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-primary-50 to-purple-50">
       <div className="container mx-auto px-6">
@@ -161,6 +179,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <motion.div
+            id="contact-form"
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.4 }}
@@ -295,6 +314,7 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
+                onClick={handleStartProject}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
@@ -302,6 +322,7 @@ const Contact = () => {
                 Start a Project
               </motion.button>
               <motion.button
+                onClick={handleScheduleConsultation}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-colors"
