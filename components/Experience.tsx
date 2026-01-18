@@ -210,10 +210,12 @@ const Experience = () => {
                 </div>
                 <h4 className="font-semibold text-gray-800 mb-2 pr-12">{achievement.title}</h4>
                 <p className="text-gray-600 text-sm">
-                  {index === 0 ? 'Demonstrated exceptional data analytics and problem-solving skills' :
-                   index === 1 ? 'Innovative solution design and presentation skills recognized' :
-                   index === 2 ? 'Outstanding performance in competitive programming and analytics' :
-                   'Active participation in technical competitions and innovation challenges'}
+                  {index === 0 ? 'Demonstrated exceptional problem-solving and algorithmic skills in competitive programming' :
+                   index === 1 ? 'Earned elite-level certification demonstrating advanced Java programming proficiency' :
+                   index === 2 ? 'Showcased strong analytical abilities in data-driven decision making and insights' :
+                   index === 3 ? 'Demonstrated innovative ideation and problem-solving capabilities in technology challenges' :
+                   index === 4 ? 'Achieved top performance among participants in business analytics and strategy competition' :
+                   'Contributed to collaborative innovation through active hackathon participation'}
                 </p>
               </motion.div>
             ))}

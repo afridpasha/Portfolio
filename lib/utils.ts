@@ -80,6 +80,10 @@ export const achievements = [
     url: 'https://drive.google.com/drive/folders/1rgivPi9mEDueX1p99axTgaUWUhgdIHoX?usp=sharing'
   },
   {
+    title: 'Achieved Gold + Elite Certification in NPTEL Programming In Java',
+    url: 'https://drive.google.com/file/d/1VcrkP6lOxlcuzzKcIoPQ11r8xuJsXwUe/view?usp=sharing'
+  },
+  {
     title: 'Advanced to Stage-2 | AlgoVision Data Analytics Competition',
     url: 'https://drive.google.com/file/d/1mfOnzCj0TpI6RyeEfUlv79PE7xPk2Tow/view?usp=sharing'
   },
