@@ -3,12 +3,16 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { skills } from '@/lib/utils'
+import Image from 'next/image'
 
 const SkillBar = ({ skill, index }: { skill: any, index: number }) => {
   const [ref, inView] = useInView({
     threshold: 0.3,
     triggerOnce: true,
   })
+
+  // Larger size for logos that are hard to see
+  const logoSize = ['C++', 'Express.js', 'DynamoDB', 'SQL/NoSQL'].includes(skill.name) ? 55 : 28
 
   return (
     <motion.div
@@ -20,7 +24,7 @@ const SkillBar = ({ skill, index }: { skill: any, index: number }) => {
     >
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center space-x-2">
-          <span className="text-2xl">{skill.icon}</span>
+          <Image src={skill.logo} alt={skill.name} width={logoSize} height={logoSize} className="object-contain" />
           <span className="font-semibold text-gray-800">{skill.name}</span>
         </div>
         <span className="text-primary-600 font-bold">{skill.level}%</span>
@@ -162,6 +166,7 @@ const Skills = () => {
               {
                 institution: 'Vasavi College Of Engineering, Hyderabad',
                 degree: 'Bachelor of Technology in Information Technology',
+                honors: 'Honours in Artificial Intelligence and Machine Learning',
                 period: '2023 – 2027',
                 grade: 'CGPA - 8.5',
                 location: 'Telangana, India'
@@ -191,6 +196,12 @@ const Skills = () => {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div className="mb-4 md:mb-0">
                     <h4 className="text-xl font-semibold text-gray-800 mb-2">{edu.degree}</h4>
+                    {edu.honors && (
+                      <p className="text-purple-600 font-medium mb-1 flex items-center">
+                        <span className="mr-1">🎓</span>
+                        {edu.honors}
+                      </p>
+                    )}
                     <p className="text-primary-600 font-medium mb-1">{edu.institution}</p>
                     <p className="text-gray-600 text-sm">{edu.location}</p>
                   </div>

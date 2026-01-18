@@ -105,7 +105,7 @@ const Header = () => {
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.2 }}
-              href="https://www.linkedin.com/in/afrid-pasha-80240b220/"
+              href="https://www.linkedin.com/in/mohammad-afrid-pasha/"
               className="text-gray-600 hover:text-primary-600"
             >
               <Linkedin size={20} />

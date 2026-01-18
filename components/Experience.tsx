@@ -17,7 +17,7 @@ const ExperienceCard = ({ exp, index }: { exp: any, index: number }) => {
       initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ delay: index * 0.2 }}
-      className="relative"
+      className="relative mb-8"
     >
       {/* Timeline Line */}
       <div className="absolute left-8 top-16 bottom-0 w-0.5 bg-primary-200 hidden lg:block" />
@@ -25,15 +25,15 @@ const ExperienceCard = ({ exp, index }: { exp: any, index: number }) => {
       {/* Timeline Dot */}
       <div className="absolute left-6 top-8 w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-lg hidden lg:block" />
 
-      <div className="lg:ml-20 bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow relative">
+      <div className="lg:ml-20 bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow relative overflow-visible">
         {/* Certificate Link */}
-        <div className="absolute top-4 right-4">
+        <div className="absolute -top-2 right-4">
           <motion.a
             href={exp.certificateUrl}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
-            className="bg-white/20 backdrop-blur-sm p-2 rounded-full text-primary-600 hover:bg-primary-100 transition-colors shadow-md"
+            className="bg-primary-100 p-2 rounded-full text-primary-600 hover:bg-primary-200 transition-colors shadow-md inline-block"
           >
             <ExternalLink size={16} />
           </motion.a>

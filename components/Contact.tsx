@@ -160,7 +160,7 @@ const Contact = () => {
               <div className="flex space-x-4">
                 {[
                   { icon: <Github size={24} />, link: 'https://github.com/afridpasha', color: 'hover:text-gray-800' },
-                  { icon: <Linkedin size={24} />, link: 'https://www.linkedin.com/in/afrid-pasha-80240b220/', color: 'hover:text-blue-600' },
+                  { icon: <Linkedin size={24} />, link: 'https://www.linkedin.com/in/mohammad-afrid-pasha/', color: 'hover:text-blue-600' },
                   { icon: <Mail size={24} />, link: 'mailto:afridpasha1983@gmail.com', color: 'hover:text-red-600' },
                 ].map((social, index) => (
                   <motion.a
