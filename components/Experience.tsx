@@ -148,7 +148,7 @@ const Experience = () => {
                 icon: <Award size={32} className="text-yellow-600" />,
                 title: 'Certifications',
                 description: 'Industry-recognized certifications from top organizations',
-                metric: '7+ Certifications'
+                metric: '15+ Certifications'
               },
               {
                 icon: <TrendingUp size={32} className="text-green-600" />,

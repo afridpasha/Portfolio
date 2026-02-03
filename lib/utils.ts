@@ -71,7 +71,15 @@ export const certifications = [
   { name: 'Oracle Cloud Infrastructure 2025 Certified Multicloud Architect Professional', issuer: 'Oracle', year: '2025' },
   { name: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate', issuer: 'Oracle', year: '2025' },
   { name: 'Cisco Networking Academy (Introduction to Networks)', issuer: 'Cisco', year: '2025' },
-  { name: 'Cisco Networking Academy (Introduction to Cybersecurity)', issuer: 'Cisco', year: '2025' }
+  { name: 'Cisco Networking Academy (Introduction to Cybersecurity)', issuer: 'Cisco', year: '2025' },
+  { name: 'Software Engineer', issuer: 'HackerRank', year: '2025', url: 'https://drive.google.com/file/d/11Pm4BbsFVkYyvBlYiuEo2tc18nYLpcxJ/view?usp=sharing' },
+  { name: 'Software Engineer Intern', issuer: 'HackerRank', year: '2025', url: 'https://drive.google.com/file/d/1CFjqIglLM35uI-1J_FXeDoDD2DDTJxB2/view?usp=sharing' },
+  { name: 'SQL (Advanced)', issuer: 'HackerRank', year: '2025', url: 'https://drive.google.com/file/d/1wOe6qsNdQVFblIuQCf_7z2ydmcMHs1M2/view?usp=sharing' },
+  { name: 'Python (Basic)', issuer: 'HackerRank', year: '2024', url: 'https://drive.google.com/file/d/1sy5qc5c2VrDhrTMrXhtlUUNvcNxkDFKy/view?usp=sharing' },
+  { name: 'Java (Basic)', issuer: 'HackerRank', year: '2024', url: 'https://drive.google.com/file/d/10DXDriuELT6-bMEatehk40FGsBsZadzG/view?usp=sharing' },
+  { name: 'Problem Solving (Basic)', issuer: 'HackerRank', year: '2024', url: 'https://drive.google.com/file/d/1HTh6lQXhtBW3fDGAlVe9MKjpjnUYTWZy/view?usp=sharing' },
+  { name: 'Problem Solving (Intermediate)', issuer: 'HackerRank', year: '2024', url: 'https://drive.google.com/file/d/1WPwCuGO0X1vAvIntg5AY6GtcCgNYEEmI/view?usp=sharing' },
+  { name: 'AI Tools Workshop', issuer: 'be10x', year: '2024', url: 'https://drive.google.com/file/d/1b8--M_viSVA2DY4rGH1sybGk12PGf_9a/view?usp=sharing' }
 ]
 
 export const achievements = [
@@ -172,6 +180,19 @@ export const projects = [
   },
   {
     id: 4,
+    title: 'Perfumes Shop - AI-Powered Luxury E-Commerce Platform',
+    description: 'Production-ready full-stack e-commerce platform with AI chatbot achieving 99.9% uptime and seamless payment processing',
+    problem: 'Luxury perfume retailers lack intelligent customer support and secure payment systems for online shopping experiences',
+    solution: 'Architected scalable MERN stack platform integrating Google Gemini AI chatbot, Stripe payments, and microservices architecture with auto-scaling on Render Cloud',
+    tech: ['MERN Stack', 'React 18', 'Node.js', 'Express.js', 'MongoDB Atlas', 'Google Gemini API', 'Stripe API', 'JWT', 'SCSS', 'GSAP', 'Three.js', 'Web Speech API', 'REST APIs', 'Microservices'],
+    features: ['AI chatbot with voice recognition reducing support queries by 40%', 'Secure Stripe payment gateway with PCI-DSS compliance', 'Real-time inventory management and order tracking', 'Promo code system with automated discount validation', 'Responsive UI with 3D animations and <2s load time', 'Role-based access control with JWT authentication'],
+    results: ['99.9% uptime', '40% reduced support queries', '<2s page load', '95+ Lighthouse score', '100% secure transactions', '24/7 AI support'],
+    liveUrl: 'https://perfumesshop-d2gt.onrender.com/',
+    githubUrl: 'https://github.com/afridpasha/PerfumesShop',
+    image: '/projects/perfumes-shop.png'
+  },
+  {
+    id: 5,
     title: 'Real-Time Cyber Threat Detection System',
     description: 'Enterprise-grade security system with 99.9% threat detection accuracy',
     problem: 'Organizations facing increasing cyber threats with slow detection and response times',
