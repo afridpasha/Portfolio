@@ -65,13 +65,16 @@ export const education = [
 ]
 
 export const certifications = [
-  { name: 'Supervised Machine Learning', issuer: 'DeepLearning.AI (Coursera)', instructor: 'Andrew Ng', year: '2025' },
-  { name: 'AWS Cloud Technical Essentials', issuer: 'Amazon Web Services (Coursera)', year: '2025' },
-  { name: 'Databases for Developers', issuer: 'Oracle', year: '2025' },
-  { name: 'Oracle Cloud Infrastructure 2025 Certified Multicloud Architect Professional', issuer: 'Oracle', year: '2025' },
-  { name: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate', issuer: 'Oracle', year: '2025' },
-  { name: 'Cisco Networking Academy (Introduction to Networks)', issuer: 'Cisco', year: '2025' },
-  { name: 'Cisco Networking Academy (Introduction to Cybersecurity)', issuer: 'Cisco', year: '2025' },
+  { name: 'Supervised Machine Learning', issuer: 'DeepLearning.AI (Coursera)', instructor: 'Andrew Ng', year: '2025', url: 'https://drive.google.com/file/d/18h-K8dgiFdzXVhHn9eYlyK9wBnREWn5L/view?usp=sharing' },
+  { name: 'AWS Cloud Technical Essentials', issuer: 'Amazon Web Services (Coursera)', year: '2025', url: 'https://drive.google.com/file/d/1QpIv5dAmT4pTD4xWythFlpDyn--_JDmh/view?usp=sharing' },
+  { name: 'Databases for Developers', issuer: 'Oracle', year: '2025', url: 'https://drive.google.com/file/d/1K8CwmIIrQSrmzjgZ2lVRRaA1O9MO5R2Z/view?usp=sharing' },
+  { name: 'Oracle Cloud Infrastructure 2025 Certified Multicloud Architect Professional', issuer: 'Oracle', year: '2025', url: 'https://drive.google.com/drive/folders/1jnoKOlePgrXFQ32oeNK8tIyFXtjtTnZc?role=writer' },
+  { name: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate', issuer: 'Oracle', year: '2025', url: 'https://drive.google.com/drive/folders/1jTTmzIbYFcIo2z0vhtBHOrN6x-bDtlBV?usp=sharing' },
+  { name: 'Introduction to Networks', issuer: 'Cisco Networking Academy', year: '2025', url: 'https://drive.google.com/file/d/1orrQxkz10R8lvO98bknZNrOVLsSXufKO/view?usp=sharing' },
+  { name: 'Introduction to Cybersecurity', issuer: 'Cisco Networking Academy', year: '2025', url: 'https://drive.google.com/file/d/10Gd7H_FzRrM3vusIcjdXgW3J_AdGtHRY/view?usp=sharing' },
+  { name: 'Cisco Packet Tracer Certified Professional', issuer: 'Cisco Networking Academy', year: '2025', url: 'https://drive.google.com/file/d/1X1HmSo2kVtuN9Fyww9hG-TLH0VNskph8/view?usp=sharing' },
+  { name: 'Industrial Networking Essentials', issuer: 'Cisco Networking Academy', year: '2025', url: 'https://drive.google.com/file/d/1BomoGDi7YOtYDn1iRlqP5ujN1PBQIH_I/view?usp=sharing' },
+  { name: 'Operating Systems Basics', issuer: 'Cisco Networking Academy', year: '2025', url: 'https://drive.google.com/file/d/1KyjuiIEBkNtJkVV7Xog2MAI0lsrwwECK/view?usp=sharing' },
   { name: 'Software Engineer', issuer: 'HackerRank', year: '2025', url: 'https://drive.google.com/file/d/11Pm4BbsFVkYyvBlYiuEo2tc18nYLpcxJ/view?usp=sharing' },
   { name: 'Software Engineer Intern', issuer: 'HackerRank', year: '2025', url: 'https://drive.google.com/file/d/1CFjqIglLM35uI-1J_FXeDoDD2DDTJxB2/view?usp=sharing' },
   { name: 'SQL (Advanced)', issuer: 'HackerRank', year: '2025', url: 'https://drive.google.com/file/d/1wOe6qsNdQVFblIuQCf_7z2ydmcMHs1M2/view?usp=sharing' },

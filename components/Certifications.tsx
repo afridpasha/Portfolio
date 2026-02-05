@@ -37,6 +37,9 @@ const Certifications = () => {
               <div className="text-4xl mb-3">🏆</div>
               <h3 className="font-bold text-gray-900 text-base mb-2">{cert.name}</h3>
               <p className="text-sm text-gray-600 mb-2">{cert.issuer}</p>
+              {cert.instructor && (
+                <p className="text-sm text-gray-500 mb-2">Instructor: {cert.instructor}</p>
+              )}
               <p className="text-sm font-semibold text-blue-600">{cert.year}</p>
             </motion.div>
           ))}
