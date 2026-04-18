@@ -70,6 +70,7 @@ export const certifications = [
   { name: 'Databases for Developers', issuer: 'Oracle', year: '2025', url: 'https://drive.google.com/file/d/1K8CwmIIrQSrmzjgZ2lVRRaA1O9MO5R2Z/view?usp=sharing' },
   { name: 'Oracle Cloud Infrastructure 2025 Certified Multicloud Architect Professional', issuer: 'Oracle', year: '2025', url: 'https://drive.google.com/drive/folders/1jnoKOlePgrXFQ32oeNK8tIyFXtjtTnZc?role=writer' },
   { name: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate', issuer: 'Oracle', year: '2025', url: 'https://drive.google.com/drive/folders/1jTTmzIbYFcIo2z0vhtBHOrN6x-bDtlBV?usp=sharing' },
+  { name: 'Oracle Data Platform 2025 Certified Foundations Associate', issuer: 'Oracle', year: '2026', url: 'https://drive.google.com/drive/folders/1lL2OMZYctbSsLhwXAXgA5GVDnsMN8BhW?usp=sharing' },
   { name: 'Introduction to Networks', issuer: 'Cisco Networking Academy', year: '2025', url: 'https://drive.google.com/file/d/1orrQxkz10R8lvO98bknZNrOVLsSXufKO/view?usp=sharing' },
   { name: 'Introduction to Cybersecurity', issuer: 'Cisco Networking Academy', year: '2025', url: 'https://drive.google.com/file/d/10Gd7H_FzRrM3vusIcjdXgW3J_AdGtHRY/view?usp=sharing' },
   { name: 'Cisco Packet Tracer Certified Professional', issuer: 'Cisco Networking Academy', year: '2025', url: 'https://drive.google.com/file/d/1X1HmSo2kVtuN9Fyww9hG-TLH0VNskph8/view?usp=sharing' },
@@ -99,12 +100,20 @@ export const achievements = [
     url: 'https://drive.google.com/file/d/1mfOnzCj0TpI6RyeEfUlv79PE7xPk2Tow/view?usp=sharing'
   },
   {
+    title: '2nd Place | Technical Project Expo — Sudhee 2026, CBIT Hyderabad',
+    url: 'https://drive.google.com/drive/folders/1fI6ZahvxQgB-Oa6_ND9D1Y0bLBnvtNx6?usp=sharing'
+  },
+  {
     title: 'Providence LEAP Ideathon Qualified to Stage-2',
     url: 'https://drive.google.com/file/d/1kdCFHi2EhdrMi0QMG124bo-DezUCKUWL/view?usp=sharing'
   },
   {
     title: 'Secured 32nd Position in Deal Dynamics at Quark\'25, BITS Pilani',
     url: 'https://unstop.com/quiz/deal-dynamics-quark25-birla-institute-of-technology-and-sciences-bits-pilani-kk-birla-goa-campus-1365726/online-assessment/211414?utm_campaign=site-emails&utm_medium=d2c-automated&utm_source=result-out-deal-dynamics-bits-pilani-goa-birla-institute-of-technology-and-sciences-bits-pilani-kk-birla-goa-campus'
+  },
+  {
+    title: 'Shortlisted for Round 2 | AISEHack 2026 — IBM × IIT Delhi × ANRF, IIIT Hyderabad',
+    url: 'https://drive.google.com/drive/folders/1zgQg7le4rAebDjk0impr1r9HNzNLa4KN?usp=sharing'
   },
   {
     title: 'Hackathon Participant | Felicity \'25',
@@ -153,7 +162,9 @@ export const projects = [
     results: ['95% pose accuracy', '30+ FPS processing', '40% faster corrections', '10K+ assessments/month'],
     liveUrl: 'https://afridpasha1983-deepfit-ai.hf.space',
     githubUrl: 'https://github.com/afridpasha/DeepFit_AI',
-    image: '/projects/deepfit.jpg'
+    image: '/projects/deepfit.jpg',
+    appLogo: '/projects/deepfit-app-logo.png',
+    apkUrl: '/apks/DeepFit.apk'
   },
   {
     id: 2,
@@ -183,6 +194,43 @@ export const projects = [
   },
   {
     id: 4,
+    title: 'FlowBridge - Hybrid Multi-Protocol File Transfer & Real-Time Collaboration Platform',
+    description: 'Cloud-native distributed file exchange ecosystem achieving 800 Mbps TCP throughput and 10,000+ concurrent WebSocket connections across quad-protocol architecture',
+    problem: 'Enterprise file transfer systems are fragmented, protocol-locked, and fail to deliver simultaneous high-throughput transfers, real-time P2P collaboration, and zero-knowledge security within a single scalable platform',
+    solution: 'Engineered a production-grade, cloud-agnostic distributed platform unifying HTTP REST, WebRTC DataChannels, raw TCP Sockets, and WebSocket streams — backed by CRDT-powered collaborative IDE, AES-256-GCM zero-knowledge encryption, multi-cloud storage abstraction (Cloudflare R2, Backblaze B2, MinIO), and Redis Pub/Sub achieving 800 Mbps throughput with sub-25ms P99 latency',
+    tech: [
+      'Python', 'Flask', 'WebSocket', 'WebRTC', 'TCP Sockets', 'REST APIs',
+      'MongoDB', 'Redis', 'Celery', 'Docker', 'Kubernetes', 'Nginx',
+      'Cloudflare R2', 'Backblaze B2', 'MinIO', 'Boto3',
+      'JWT', 'AES-256-GCM', 'Argon2id', 'TOTP 2FA',
+      'CRDT', 'Bloom Filter', 'Merkle Tree', 'HyperLogLog',
+      'Eventlet', 'Gunicorn', 'Flask-SocketIO', 'Pydantic',
+      'Consistent Hashing', 'Circuit Breaker', 'Distributed Systems'
+    ],
+    features: [
+      'Quad-protocol architecture — HTTP, WebSocket, WebRTC P2P DataChannels & raw TCP streams in a single platform',
+      'Real-time collaborative CodeShare IDE powered by CRDT differential sync with live multi-cursor tracking',
+      'AES-256-GCM zero-knowledge client-side encryption with Argon2id hashing and TOTP 2FA (Google Authenticator)',
+      'Multi-cloud VFS abstraction with Circuit Breaker failover across Cloudflare R2, Backblaze B2, and MinIO',
+      'Redis-backed Token Bucket rate limiting, Bloom Filter O(1) lookups, and HyperLogLog cardinality estimation',
+      'Merkle Tree chunk integrity verification with resumable uploads and SHA-256 end-to-end checksums',
+      'Secure OTP share links with Fibonacci backoff brute-force mitigation and UUIDv4 IDOR protection',
+      'Kubernetes HPA auto-scaling with Prometheus/Grafana observability and structured JSON audit logging'
+    ],
+    results: [
+      '800 Mbps raw TCP throughput',
+      '10,000+ concurrent WebSockets',
+      '400 Mbps WebRTC P2P transfers',
+      'Sub-25ms P99 end-to-end latency'
+    ],
+    liveUrl: 'https://flowbridge-lb.afridpasha1983.workers.dev',
+    githubUrl: 'https://github.com/afridpasha/Flow_Bridge_File_Transfer/tree/master',
+    image: '/projects/flowbridge.png',
+    appLogo: '/projects/FlowBridgeFileTransfer-App-Logo.png',
+    apkUrl: '/apks/FlowBridgeFileTransfer.apk'
+  },
+  {
+    id: 5,
     title: 'Perfumes Shop - AI-Powered Luxury E-Commerce Platform',
     description: 'Production-ready full-stack e-commerce platform with AI chatbot achieving 99.9% uptime and seamless payment processing',
     problem: 'Luxury perfume retailers lack intelligent customer support and secure payment systems for online shopping experiences',
@@ -195,7 +243,7 @@ export const projects = [
     image: '/projects/perfumes-shop.png'
   },
   {
-    id: 5,
+    id: 6,
     title: 'Real-Time Cyber Threat Detection System',
     description: 'Enterprise-grade security system with 99.9% threat detection accuracy',
     problem: 'Organizations facing increasing cyber threats with slow detection and response times',

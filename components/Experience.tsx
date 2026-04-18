@@ -206,15 +206,17 @@ const Experience = () => {
                   <ExternalLink size={16} />
                 </motion.div>
                 <div className="text-4xl mb-4">
-                  {index === 0 ? '📈' : index === 1 ? '💡' : index === 2 ? '🏆' : '🚀'}
+                  {index === 0 ? '📈' : index === 1 ? '💡' : index === 2 ? '🏆' : index === 3 ? '🥈' : '🚀'}
                 </div>
                 <h4 className="font-semibold text-gray-800 mb-2 pr-12">{achievement.title}</h4>
                 <p className="text-gray-600 text-sm">
                   {index === 0 ? 'Demonstrated exceptional problem-solving and algorithmic skills in competitive programming' :
                    index === 1 ? 'Earned elite-level certification demonstrating advanced Java programming proficiency' :
                    index === 2 ? 'Showcased strong analytical abilities in data-driven decision making and insights' :
-                   index === 3 ? 'Demonstrated innovative ideation and problem-solving capabilities in technology challenges' :
-                   index === 4 ? 'Achieved top performance among participants in business analytics and strategy competition' :
+                   index === 3 ? 'Built DeepFit AI — a camera-based pose estimation platform that evaluates athlete fitness using real-time computer vision, defended before industry experts at CBIT Hyderabad' :
+                   index === 4 ? 'Demonstrated innovative ideation and problem-solving capabilities in technology challenges' :
+                   index === 5 ? 'Achieved top performance among participants in business analytics and strategy competition' :
+                   index === 6 ? 'Team VayuScope advanced to Round 2 at a highly competitive national AI hackathon, recognized for exceptional innovation and expertise in Artificial Intelligence by IBM Research and IIT Delhi' :
                    'Contributed to collaborative innovation through active hackathon participation'}
                 </p>
               </motion.div>

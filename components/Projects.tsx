@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ExternalLink, Github, ArrowRight, Zap, Target, TrendingUp } from 'lucide-react'
+import { ExternalLink, Github, ArrowRight, Zap, Target, TrendingUp, Download } from 'lucide-react'
 import { projects } from '@/lib/utils'
 import { useState } from 'react'
 import Image from 'next/image'
@@ -127,6 +127,23 @@ const ProjectCard = ({ project, index }: { project: any, index: number }) => {
             </div>
           </div>
         </motion.div>
+
+        {/* App Download Section */}
+        {(project.apkUrl !== undefined || project.appLogo !== undefined) && (
+          <div className="flex items-center justify-between mt-6 p-4 bg-primary-50 rounded-xl border border-primary-100">
+            <div className="flex flex-col">
+              <span className="font-bold text-gray-800">Our App</span>
+              <span className="text-xs text-gray-500">Download the App</span>
+            </div>
+            <a href={project.apkUrl || '#'} download={project.apkUrl ? true : undefined} className="hover:scale-105 transition-transform flex items-center justify-center w-14 h-14 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden relative group cursor-pointer">
+              {project.appLogo ? (
+                <Image src={project.appLogo} alt="Our App Logo" fill className="object-cover" />
+              ) : (
+                <span className="text-[10px] text-gray-400 text-center font-medium p-1 group-hover:text-primary-500 transition-colors">App Logo</span>
+              )}
+            </a>
+          </div>
+        )}
 
         {/* Action Buttons */}
         <div className="flex space-x-4 mt-6">
