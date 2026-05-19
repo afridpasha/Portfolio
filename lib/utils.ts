@@ -168,16 +168,18 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'Traffic Optimization System',
-    description: 'Intelligent traffic management using computer vision and ML algorithms',
-    problem: 'Urban traffic congestion causing delays and inefficient traffic flow management',
-    solution: 'Implemented YOLO v8 computer vision for vehicle detection with ML optimization',
-    tech: ['Python', 'YOLO v8', 'Computer Vision', 'Machine Learning', 'OpenCV'],
-    features: ['Real-time vehicle detection', 'Traffic flow optimization', 'Smart signal control', 'Analytics dashboard'],
-    results: ['40% traffic flow improvement', 'Real-time detection', 'Smart optimization'],
-    liveUrl: 'https://afridpasha1983-traffic-optimization-ai.hf.space/',
-    githubUrl: 'https://github.com/afridpasha/TRAFFIC-OPTIMIZATION/tree/master',
-    image: '/projects/traffic.jpg'
+    title: 'NeuroPlex AI - Neural Intelligence for Healthcare | OSCC Detection Platform',
+    description: 'Enterprise-grade, production-ready two-stage AI diagnostic platform achieving 96.8% hybrid fusion accuracy for real-time Oral Squamous Cell Carcinoma (OSCC) detection via combining Dual Vision Transformers',
+    problem: 'Oral Squamous Cell Carcinoma (OSCC) diagnosis demands highly specialized pathologists, expensive lab infrastructure, inconsistent H&E stain normalization across laboratories, lack of transparent AI decision-making (black-box models), absence of personalized survival prognosis, language barriers in clinical reporting, and inability to scale remote cancer screening — all of which delay early detection, worsen patient outcomes, and increase economic burden on healthcare systems globally',
+    solution: 'Architected production-grade medical AI platform deploying dual-stage inference: Stage-1 HetFusionNet v2 (76M parameters) fuses Swin-ViT-Small + CrossViT-15 transformers achieving 95.2% CNN accuracy with MC-Dropout Bayesian uncertainty quantification. Stage-2 RealTabPFN-2.5 processes 20-feature clinical vectors for TNM staging and survival prediction. Hybrid Fusion algorithm [(0.95×CNN) + (0.5×Tabular)] delivers 96.8% accuracy. Integrates Macenko stain normalization, Grad-CAM++/Layer-CAM explainability, WSI spatial heatmaps, SHAP risk attribution, Kaplan-Meier survival curves, Gemini 2.5 Flash + Groq Llama 3.3 70B VLM for clinical narratives, MongoDB + Cloudflare R2 storage, and Flask REST API — all in <30 second inference',
+    tech: ['Swin-ViT-Small', 'CrossViT-15', 'HetFusionNet', 'MC-Dropout (Bayesian Deep Learning)', 'Macenko Stain Normalization (SVD)', 'Grad-CAM++', 'Layer-CAM', 'Explainable AI (XAI)', 'RealTabPFN-2.5', 'XGBoost Ensemble', 'SHAP TreeExplainer', 'Kaplan-Meier Survival Analysis', 'Vision-Language Models (VLM)', 'Whole Slide Imaging (WSI)', 'Tile-Based Spatial Analysis', 'Cloudflare R2 (S3-compatible)', 'IndexedDB (Browser Storage)', 'HIPAA-Compliant Architecture', 'Otsu Thresholding', 'CLAHE Contrast Enhancement', 'Docker'],
+    features: ['Dual-stage AI pipeline: HetFusionNet v2 CNN (95.2%) fusing Swin-ViT + CrossViT for OSCC classification from H&E images', 'MC-Dropout Bayesian uncertainty with 50 passes outputting confidence levels (HIGH/MODERATE/LOW) and uncertainty scores', 'Macenko stain normalization with quality control (blur detection, tissue thresholding) for multi-lab standardization', 'RealTabPFN-2.5 tabular model processing 20 features for TNM staging, survival prediction, treatment plans, and cost estimation', 'Hybrid Fusion [(0.95×CNN) + (0.5×Tabular)] with risk stratification achieving 96.8% accuracy (+1.6% vs CNN, +9.5% vs tabular)', 'Grad-CAM++ and Layer-CAM XAI heatmaps with CLAHE enhancement for clinician-interpretable diagnostic regions', 'WSI spatial analysis: 224×224 tile inference generating color-coded heatmaps (Blue=Normal, Yellow=Suspicious, Red=Cancer)', 'SHAP risk attribution identifying modifiable factors (Tobacco +25.3%, Alcohol +18.7%) with personalized reduction strategies', 'Kaplan-Meier survival curves with 1/3/5/10-year predictions, population benchmarking, and clinical recommendations', 'VLM integration (Gemini 2.5 + Groq Llama 3.3 70B) for clinical narratives, medical Q&A, and 100+ language translation', 'MongoDB + Cloudflare R2 storage: metadata/thumbnails in MongoDB, 26+ MB PDF reports via R2 presigned URLs', 'Temporal comparison engine with SSIM scoring for disease progression and treatment response tracking', 'Hospital-grade auth (bcrypt, Flask-Login, CSRF, rate limiting) with multi-user support and HIPAA-compliant audit trails', 'Professional PDF reports with XAI heatmaps, WSI maps, Kaplan-Meier curves, SHAP plots, and treatment plans', 'REST API with 8 endpoints processing full inference in <30 seconds on Intel i7 + NVIDIA RTX 3070'],
+    results: ['96.8% hybrid fusion accuracy (CNN + Tabular ensemble)', '95.2% Stage-1 CNN accuracy (AUC-ROC 0.982)', '<30 seconds full-pipeline inference (XAI + WSI + VLM)', '100+ languages supported via VLM translation', '26+ MB clinical PDF reports auto-generated', '87.3% Stage-2 tabular staging accuracy', '50-pass MC-Dropout Bayesian uncertainty quantification', '256 WSI tiles analyzed per image in spatial heatmap'],
+    liveUrl: 'https://afridpasha1983-hetfusion-federated-learning-medical-ai.hf.space/',
+    githubUrl: 'https://github.com/afridpasha/NeuroPlex-AI',
+    image: '/projects/neuroplex.png',
+    appLogo: '/projects/neuroplex-app-logo.png',
+    apkUrl: '/apks/NeuroPlex-AI.apk'
   },
   {
     id: 3,
@@ -231,6 +233,19 @@ export const projects = [
   },
   {
     id: 5,
+    title: 'Perfumes Shop - AI-Powered Luxury E-Commerce Platform',
+    description: 'Intelligent traffic management using computer vision and ML algorithms',
+    problem: 'Urban traffic congestion causing delays and inefficient traffic flow management',
+    solution: 'Implemented YOLO v8 computer vision for vehicle detection with ML optimization',
+    tech: ['Python', 'YOLO v8', 'Computer Vision', 'Machine Learning', 'OpenCV'],
+    features: ['Real-time vehicle detection', 'Traffic flow optimization', 'Smart signal control', 'Analytics dashboard'],
+    results: ['40% traffic flow improvement', 'Real-time detection', 'Smart optimization'],
+    liveUrl: 'https://afridpasha1983-traffic-optimization-ai.hf.space/',
+    githubUrl: 'https://github.com/afridpasha/TRAFFIC-OPTIMIZATION/tree/master',
+    image: '/projects/traffic.jpg'
+  },
+  {
+    id: 6,
     title: 'Perfumes Shop - AI-Powered Luxury E-Commerce Platform',
     description: 'Production-ready full-stack e-commerce platform with AI chatbot achieving 99.9% uptime and seamless payment processing',
     problem: 'Luxury perfume retailers lack intelligent customer support and secure payment systems for online shopping experiences',
