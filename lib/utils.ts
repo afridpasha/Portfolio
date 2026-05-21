@@ -233,7 +233,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: 'Perfumes Shop - AI-Powered Luxury E-Commerce Platform',
+    title: 'Traffic Optimization System',
     description: 'Intelligent traffic management using computer vision and ML algorithms',
     problem: 'Urban traffic congestion causing delays and inefficient traffic flow management',
     solution: 'Implemented YOLO v8 computer vision for vehicle detection with ML optimization',
